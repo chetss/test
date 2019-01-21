@@ -34,7 +34,6 @@ def database_demo():
     db['test'] = 121212
     print(db[1])
 
-database_demo()
 # limition of dbm is that it can only work for bytes and string
 # and to overcome this pickle is introduced
 # values must be bytes or strings
@@ -45,3 +44,36 @@ def mypickle():
     s = pickle.dumps(l1)
     print(s)
     print(pickle.loads(s))
+
+
+def os_popon():
+    import os
+    cmd = 'python exercise12.py'
+    fs = os.popen(cmd)
+    print(fs.read())
+    fs.close()
+
+def my_test():
+    # ! Reason? Lookup for a function is a costly operation.
+    # In the second snippet, I stored the function directly in the scope of the function,
+    # so it doesn’t matter how many times I call it, 
+    # each time the runtime knows exactly where it has to look for the results.
+    import datetime 
+    
+    alphabets = [str(x)for x in range(10000000)] 
+    
+    # ?first
+    a = datetime.datetime.now() # store initial time 
+    for item in alphabets: 
+        len(item) 
+    b = datetime.datetime.now() # store final time 
+    print((b-a).total_seconds()) # results  => 0.5069
+    
+    # ?second
+    a = datetime.datetime.now() 
+    fn = len				 # function stored locally 
+    for item in alphabets: 
+        fn(item) 
+    b = datetime.datetime.now() 
+    print((b-a).total_seconds()) # resutls => 0.3405
+my_test()
