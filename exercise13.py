@@ -76,4 +76,5 @@ def my_test():
         fn(item) 
     b = datetime.datetime.now() 
     print((b-a).total_seconds()) # resutls => 0.3405
+
 my_test()
