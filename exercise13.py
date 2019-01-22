@@ -77,4 +77,13 @@ def my_test():
     b = datetime.datetime.now() 
     print((b-a).total_seconds()) # resutls => 0.3405
 
-my_test()
+
+def test():
+    my_list = 	['spam','egg','spam','spam','bacon','spam']
+    my_dict = {}
+
+    for x in my_list:
+        my_dict[x] = my_dict.get(x,0)+1
+    print(my_dict)
+
+test()
