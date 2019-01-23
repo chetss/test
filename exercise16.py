@@ -16,10 +16,12 @@ class Date:
 
     @property
     def day(self):
+        print('day gettter')
         return self.__day
     
     @day.setter    
     def day(self,day):
+        print('day setter')
         self.__day = day 
 
     @property
@@ -64,7 +66,5 @@ class Date:
         return temp
 
 
-
-d1 = Date(10,10,2010)
-d2 = Date(10,10,2010)
-print(d1.add_day(d2).display())
+d1 = Date()
+d1.day
