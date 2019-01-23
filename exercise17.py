@@ -2,7 +2,7 @@ class kangaroo:
     # def __init__(self,pouch_contents=[]):
     #     self.__pouch_contents = pouch_contents
 
-        # The problem with the above method is the default value for contents.
+        # The problem with the above method is the default value for pouch_contents .
         # Default values get evaluated ONCE, when the function
         # is defined; they don't get evaluated again when the
         # function is called.
@@ -15,7 +15,7 @@ class kangaroo:
         # value gets a reference to THE SAME list.  If any
         # Kangaroo modifies this shared list, they all see
         # the change.
-        
+
     def __init__(self,pouch_contents=None):
         if pouch_contents == None:
             pouch_contents = []
